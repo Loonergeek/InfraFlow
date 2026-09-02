@@ -1,5 +1,7 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import {createRoot} from 'react-dom/client';
+// CSS is resolved by the bundler; TypeScript does not need to type-check this side-effect import.
+// @ts-expect-error — no TypeScript declaration is required for the bundled stylesheet.
 import './styles.css';
 
 type Role = 'owner'|'contractor'|'subcontractor'|'inspector'|'labor';
